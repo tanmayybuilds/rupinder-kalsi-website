@@ -23,10 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const scrollY = window.scrollY;
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
     
-    // Progress bar width
+    // Progress bar (GPU-accelerated scaleX transform)
     if (docHeight > 0 && scrollProgress) {
-      const progressPercent = Math.min(100, Math.max(0, (scrollY / docHeight) * 100));
-      scrollProgress.style.width = `${progressPercent}%`;
+      const progressRatio = Math.min(1, Math.max(0, scrollY / docHeight));
+      scrollProgress.style.transform = `scaleX(${progressRatio})`;
     }
 
     // Header styling on scroll
@@ -202,7 +202,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const articleDialog = $('#article-dialog');
   const privacyDialog = $('#privacy-dialog');
 
+  let lastFocusedElement = null;
+
   function openDialog(dialog) {
+    lastFocusedElement = document.activeElement;
     closeMobileMenu();
     if (dialog && typeof dialog.showModal === 'function') {
       dialog.showModal();
@@ -220,6 +223,9 @@ document.addEventListener('DOMContentLoaded', () => {
       const openRemaining = $$('dialog[open]');
       if (openRemaining.length === 0) {
         document.body.classList.remove('modal-open');
+      }
+      if (lastFocusedElement && typeof lastFocusedElement.focus === 'function') {
+        lastFocusedElement.focus();
       }
     });
 
@@ -600,6 +606,8 @@ document.addEventListener('DOMContentLoaded', () => {
       tabRetirementBtn.classList.remove('active');
       tabSavingsBtn.setAttribute('aria-selected', 'true');
       tabRetirementBtn.setAttribute('aria-selected', 'false');
+      paneSavings.hidden = false;
+      paneRetirement.hidden = true;
       paneSavings.style.display = 'block';
       paneRetirement.style.display = 'none';
     });
@@ -609,6 +617,8 @@ document.addEventListener('DOMContentLoaded', () => {
       tabSavingsBtn.classList.remove('active');
       tabRetirementBtn.setAttribute('aria-selected', 'true');
       tabSavingsBtn.setAttribute('aria-selected', 'false');
+      paneSavings.hidden = true;
+      paneRetirement.hidden = false;
       paneSavings.style.display = 'none';
       paneRetirement.style.display = 'block';
       updateRetirementCalculator();
@@ -720,7 +730,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // ==========================================================================
   const articlesData = {
     parenting: {
-      category: 'FAMILY WEALTH & VALUES',
+      category: 'Family Wealth & Values',
       title: 'The Family Wealth Playbook: Raising Financially Resilient Kids',
       body: `
         <p>As a mother of three and a financial advisor for over two decades, one of the most frequent questions parents ask me is: <em>"How do I teach my kids about money without passing along anxiety?"</em></p>
@@ -734,7 +744,7 @@ document.addEventListener('DOMContentLoaded', () => {
       `
     },
     volatility: {
-      category: 'MARKET MINDSET & RESILIENCE',
+      category: 'Market Mindset & Resilience',
       title: 'Calm During Market Volatility: Why Discipline Beats Prediction',
       body: `
         <p>Market downturns are not glitches in the system; they are the price of admission for long-term compound growth. Yet during turbulent news cycles, emotional impulses often urge investors to <em>"do something."</em></p>
@@ -748,7 +758,7 @@ document.addEventListener('DOMContentLoaded', () => {
       `
     },
     'retirement-transition': {
-      category: 'RETIREMENT HORIZON',
+      category: 'Retirement Horizon',
       title: 'Designing Retirement: Turning Your Nest Egg Into Monthly Peace',
       body: `
         <p>For 30 to 40 years, you were conditioned to save, accumulate, and watch your account balance grow. Then, one day, you cross the retirement threshold and must begin doing the exact opposite: <em>spending from your savings.</em></p>
