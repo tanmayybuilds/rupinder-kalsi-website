@@ -140,11 +140,11 @@
       <div class="services-grid">
         <!-- 01: Family & Protection -->
         <button class="service-card reveal" data-service="family" aria-label="Learn about Family & Protection">
-          <div class="service-card-head">
-            <h3>Family & Protection</h3>
-            <div class="service-icon-box" aria-hidden="true">
+          <div class="service-header">
+            <span class="service-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
+            </span>
+            <h3>Family &amp; Protection</h3>
           </div>
           <p>Safeguard the people who depend on you most with comprehensive life, disability, and crisis resilience planning.</p>
           <span class="card-link">Explore protection scope <b>↗</b></span>
@@ -152,11 +152,11 @@
 
         <!-- 02: Wealth Accumulation -->
         <button class="service-card reveal reveal-delay-1" data-service="wealth" aria-label="Learn about Wealth & Growth">
-          <div class="service-card-head">
-            <h3>Saving & Wealth Growth</h3>
-            <div class="service-icon-box" aria-hidden="true">
+          <div class="service-header">
+            <span class="service-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></svg>
-            </div>
+            </span>
+            <h3>Saving &amp; Wealth Growth</h3>
           </div>
           <p>Transform daily cash flow habits into enduring wealth through steady, tax-efficient long-term investing.</p>
           <span class="card-link">Explore growth strategies <b>↗</b></span>
@@ -164,11 +164,11 @@
 
         <!-- 03: Retirement & Beyond -->
         <button class="service-card reveal reveal-delay-2" data-service="retirement" aria-label="Learn about Retirement & Beyond">
-          <div class="service-card-head">
-            <h3>Retirement & Beyond</h3>
-            <div class="service-icon-box" aria-hidden="true">
+          <div class="service-header">
+            <span class="service-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
-            </div>
+            </span>
+            <h3>Retirement &amp; Beyond</h3>
           </div>
           <p>Step confidently into your next chapter with predictable monthly income and clear lifestyle sustainability modeling.</p>
           <span class="card-link">Explore retirement clarity <b>↗</b></span>
@@ -176,11 +176,11 @@
 
         <!-- 04: Education & Milestones -->
         <button class="service-card reveal" data-service="education" aria-label="Learn about Children & Education">
-          <div class="service-card-head">
-            <h3>Education & Milestones</h3>
-            <div class="service-icon-box" aria-hidden="true">
+          <div class="service-header">
+            <span class="service-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-            </div>
+            </span>
+            <h3>Education &amp; Milestones</h3>
           </div>
           <p>Equip your children and grandchildren for success through structured education funds, first-home support, and milestone gifting.</p>
           <span class="card-link">Explore education plans <b>↗</b></span>
@@ -188,11 +188,11 @@
 
         <!-- 05: Tax & Cash Flow Strategy -->
         <button class="service-card reveal reveal-delay-1" data-service="tax" aria-label="Learn about Tax-Aware Cash Flow">
-          <div class="service-card-head">
-            <h3>Tax-Aware Cash Flow</h3>
-            <div class="service-icon-box" aria-hidden="true">
+          <div class="service-header">
+            <span class="service-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M6 8h12M6 12h8M6 16h4"/></svg>
-            </div>
+            </span>
+            <h3>Tax-Aware Cash Flow</h3>
           </div>
           <p>Optimize your account structures, business distributions, and annual tax efficiency so more of your money works for you.</p>
           <span class="card-link">Explore cash flow design <b>↗</b></span>
@@ -200,11 +200,11 @@
 
         <!-- 06: Intergenerational Legacy -->
         <button class="service-card reveal reveal-delay-2" data-service="legacy" aria-label="Learn about Estate & Legacy">
-          <div class="service-card-head">
-            <h3>Legacy & Family Values</h3>
-            <div class="service-icon-box" aria-hidden="true">
+          <div class="service-header">
+            <span class="service-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            </div>
+            </span>
+            <h3>Legacy &amp; Family Values</h3>
           </div>
           <p>Transfer wealth seamlessly across generations with estate harmony, thoughtful family conversations, and purposeful philanthropy.</p>
           <span class="card-link">Explore legacy planning <b>↗</b></span>
@@ -719,8 +719,8 @@
         <div class="calculator-card">
           <!-- Dual Calculator Tabs -->
           <div class="calc-tabs-bar" role="tablist" aria-label="Financial calculator models">
-            <button class="calc-tab-btn active" id="tab-btn-savings" role="tab" aria-selected="true" aria-controls="calc-pane-savings">1. Compound Savings Explorer</button>
-            <button class="calc-tab-btn" id="tab-btn-retirement" role="tab" aria-selected="false" aria-controls="calc-pane-retirement">2. Retirement Income Estimator</button>
+            <button class="calc-tab-btn active" id="tab-btn-savings" role="tab" aria-selected="true" aria-controls="calc-pane-savings"><span class="calc-tab-badge">01</span><span>Compound Savings Explorer</span></button>
+            <button class="calc-tab-btn" id="tab-btn-retirement" role="tab" aria-selected="false" aria-controls="calc-pane-retirement"><span class="calc-tab-badge">02</span><span>Retirement Income Estimator</span></button>
           </div>
 
           <!-- Tab 1: Compound Savings -->
@@ -968,7 +968,7 @@
           <button class="button gold" data-book>
             Schedule a conversation <span>↗</span>
           </button>
-          <a class="button outline" style="color: #fff; border-color: rgba(255,255,255,0.3);" href="#services">
+          <a class="button outline" href="#services">
             Explore Services
           </a>
         </div>

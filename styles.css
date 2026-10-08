@@ -322,73 +322,86 @@ p:last-child {
   gap: 16px;
 }
 
-/* Button Component */
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
+  gap: 12px;
   background: var(--green);
   color: #ffffff;
-  padding: 13px 26px;
+  padding: 14px 28px;
   border-radius: var(--radius-sm);
-  font-size: 13px;
-  font-weight: 550;
-  letter-spacing: 0.3px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border: 1.5px solid transparent;
+  box-shadow: 0 4px 14px rgba(10, 36, 33, 0.18);
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background 0.25s ease, box-shadow 0.25s ease, color 0.2s ease, border-color 0.2s ease;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
 .button:hover {
   background: var(--green-hover);
+  color: #ffffff;
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 8px 22px rgba(10, 36, 33, 0.26);
 }
 
 .button:active {
-  transform: translateY(0);
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 2px 8px rgba(10, 36, 33, 0.15);
 }
 
 .button span {
-  font-size: 16px;
+  display: inline-block;
+  font-size: 15px;
   line-height: 1;
-  transition: transform 0.2s ease;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .button:hover span {
-  transform: translate(2px, -2px);
+  transform: translate(3px, -2px);
 }
 
 .button.small {
   padding: 9px 18px;
   font-size: 12px;
-  gap: 12px;
+  gap: 10px;
 }
 
 .button.outline {
-  background: transparent;
+  background: var(--surface);
   color: var(--ink);
-  border: 1px solid var(--line);
-  box-shadow: none;
+  border: 1.5px solid var(--line);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  font-weight: 600;
 }
 
 .button.outline:hover {
   background: var(--cream-soft);
   border-color: var(--gold-text);
-  color: var(--green-accent, var(--green));
+  color: var(--ink);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
 }
 
 .button.gold {
-  background: var(--gold);
+  background-color: #dfc285;
+  background-image: linear-gradient(135deg, #dfc285 0%, #ba954e 100%);
   color: #0c2621;
-  font-weight: 600;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  font-weight: 650;
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.14);
 }
 
 .button.gold:hover {
-  background: var(--gold-hover);
+  background-color: #e4c990;
+  background-image: linear-gradient(135deg, #e4c990 0%, #c6a258 100%);
   color: #0c2621;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
 }
 
 .menu-button {
@@ -791,42 +804,44 @@ p:last-child {
   letter-spacing: 0.02em;
 }
 
-.service-icon-box {
-  width: 52px;
-  height: 52px;
-  background: var(--cream-soft);
-  border-radius: var(--radius-sm);
+.service-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.service-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 22px;
-  transition: background var(--transition-fast), transform var(--transition-fast);
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  margin-top: 1px;
 }
 
-.service-card:hover .service-icon-box {
-  background: var(--gold-light);
-  transform: scale(1.05);
-}
-
-.service-card svg {
-  width: 28px;
-  height: 28px;
+.service-icon svg {
+  width: 26px;
+  height: 26px;
   fill: none;
   stroke: var(--green);
-  stroke-width: 1.5;
+  stroke-width: 1.6;
   stroke-linecap: round;
   stroke-linejoin: round;
-  transition: stroke var(--transition-fast);
+  transition: stroke var(--transition-fast), transform var(--transition-fast);
 }
 
-.service-card:hover svg {
+.service-card:hover .service-icon svg {
   stroke: var(--gold);
+  transform: scale(1.08);
 }
 
 .service-card h3 {
-  font-size: 22px;
-  margin-bottom: 12px;
+  font-size: 21px;
+  margin: 0;
   color: var(--ink);
+  line-height: 1.3;
 }
 
 .service-card p {
@@ -834,6 +849,7 @@ p:last-child {
   line-height: 1.7;
   color: var(--muted);
   flex-grow: 1;
+  margin-top: 14px;
   margin-bottom: 24px;
   max-width: 62ch;
 }
@@ -846,7 +862,7 @@ p:last-child {
   padding-top: 16px;
   font-size: 12px;
   font-weight: 600;
-  color: var(--green-accent, var(--green));
+  color: var(--green-accent);
   transition: color var(--transition-fast);
 }
 
@@ -874,8 +890,9 @@ p:last-child {
 
 .lifestages-tabs {
   display: flex;
-  background: var(--cream-warm);
+  background: var(--cream-soft);
   padding: 6px;
+  border: 1px solid var(--line);
   border-radius: var(--radius-pill);
   gap: 6px;
   margin-bottom: 40px;
@@ -890,25 +907,34 @@ p:last-child {
 .stage-tab-btn {
   flex: 1;
   min-width: 170px;
-  padding: 12px 20px;
+  padding: 13px 22px;
   border-radius: var(--radius-pill);
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--muted);
+  font-size: 13.5px;
+  font-weight: 550;
+  color: var(--ink-secondary);
   text-align: center;
   white-space: nowrap;
-  transition: all var(--transition-fast);
+  background: transparent;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .stage-tab-btn.active {
   background: var(--green);
   color: #ffffff;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  border-color: var(--green);
+  font-weight: 600;
+  box-shadow: 0 4px 14px rgba(10, 36, 33, 0.2);
 }
 
 .stage-tab-btn:hover:not(.active) {
   color: var(--ink);
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.stage-tab-btn:active {
+  transform: scale(0.98);
 }
 
 .stage-panel {
@@ -1571,25 +1597,60 @@ p:last-child {
   display: flex;
   gap: 10px;
   background: var(--cream-soft);
-  padding: 4px;
-  border-radius: var(--radius-sm);
+  padding: 6px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
   margin-bottom: 24px;
 }
 
 .calc-tab-btn {
   flex: 1;
-  padding: 10px 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 18px;
   border-radius: var(--radius-sm);
-  font-size: 12.5px;
-  font-weight: 600;
-  color: var(--muted);
-  transition: all var(--transition-fast);
+  font-size: 13px;
+  font-weight: 550;
+  color: var(--ink-secondary);
+  background: transparent;
+  border: 1.5px solid transparent;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.calc-tab-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: var(--radius-pill);
+  background: var(--cream-warm);
+  color: var(--ink-secondary);
+  line-height: 1;
+  transition: all 0.2s ease;
+}
+
+.calc-tab-btn:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--ink);
+  border-color: var(--line-light);
 }
 
 .calc-tab-btn.active {
   background: var(--surface);
   color: var(--ink);
-  box-shadow: var(--shadow-sm);
+  border-color: var(--line);
+  font-weight: 650;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.calc-tab-btn.active .calc-tab-badge {
+  background: var(--green);
+  color: #ffffff;
 }
 
 .calculator-card {
@@ -1974,6 +2035,22 @@ details p {
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
+}
+
+.contact-banner .button.outline {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(6px);
+  box-shadow: none;
+}
+
+.contact-banner .button.outline:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: #ffffff;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.25);
 }
 
 .contact-watermark {
@@ -2515,49 +2592,93 @@ form input:focus, form select:focus, form textarea:focus {
   }
 
   .values-strip {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px 14px;
-    padding: 20px 20px;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 16px;
+    background: var(--cream-soft);
   }
 
   .values-strip-item {
-    justify-content: center;
-    font-size: 12.5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    padding: 9px 15px;
+    border-radius: var(--radius-pill);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--ink);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
     white-space: normal;
-    line-height: 1.4;
+    text-align: center;
+    line-height: 1.35;
   }
 
   .values-strip-item i {
-    display: none;
+    display: inline-block;
+    color: var(--gold-text);
+    font-size: 11px;
+    line-height: 1;
+    flex-shrink: 0;
   }
 
   .values-strip-item:last-child {
-    grid-column: 1 / -1;
+    grid-column: auto;
   }
 
   .lifestages-tabs {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 8px;
-    padding: 6px;
+    gap: 10px;
+    padding: 10px;
+    background: var(--cream-soft);
+    border: 1px solid var(--line);
     border-radius: var(--radius-md);
-    margin-bottom: 28px;
+    margin-bottom: 30px;
     overflow-x: visible;
     width: 100%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
   }
 
   .stage-tab-btn {
     min-width: 0;
     width: 100%;
-    padding: 10px 10px;
-    font-size: 12px;
+    padding: 14px 12px;
+    font-size: 12.5px;
+    font-weight: 550;
     line-height: 1.35;
     white-space: normal;
     text-align: center;
     border-radius: var(--radius-sm);
     flex: none;
+    background: var(--surface);
+    color: var(--ink);
+    border: 1.5px solid var(--line);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .stage-tab-btn:hover:not(.active) {
+    background: var(--cream-soft);
+    border-color: var(--gold-text);
+    color: var(--ink);
+  }
+
+  .stage-tab-btn.active {
+    background: var(--green);
+    color: #ffffff;
+    border-color: var(--green);
+    font-weight: 600;
+    box-shadow: 0 4px 14px rgba(10, 36, 33, 0.25);
+    transform: translateY(-1px);
+  }
+
+  .stage-tab-btn:active {
+    transform: scale(0.97);
   }
 
   .stage-panel {
@@ -2855,14 +2976,48 @@ form input:focus, form select:focus, form textarea:focus {
 
   .calc-tabs-bar {
     flex-direction: column;
-    gap: 6px;
-    padding: 4px;
+    gap: 10px;
+    padding: 8px;
+    background: var(--cream-soft);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
   }
 
   .calc-tab-btn {
-    padding: 10px 12px;
-    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 18px;
+    font-size: 13px;
+    font-weight: 600;
     text-align: center;
+    background: var(--surface);
+    border: 1.5px solid var(--line);
+    color: var(--ink);
+    border-radius: var(--radius-sm);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    cursor: pointer;
+    min-height: 48px;
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .calc-tab-btn.active {
+    background: var(--green);
+    color: #ffffff;
+    border-color: var(--green);
+    font-weight: 600;
+    box-shadow: 0 4px 14px rgba(10, 36, 33, 0.2);
+  }
+
+  .calc-tab-btn.active .calc-tab-badge {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+  }
+
+  .calc-tab-btn:active {
+    transform: scale(0.98);
   }
 
   .calc-control-head {
@@ -2940,9 +3095,24 @@ form input:focus, form select:focus, form textarea:focus {
 
   .faq-cat-btn {
     flex-shrink: 0;
-    padding: 8px 14px;
-    font-size: 12px;
+    padding: 10px 16px;
+    font-size: 12.5px;
+    font-weight: 550;
     white-space: nowrap;
+    border-radius: var(--radius-pill);
+    background: var(--surface);
+    border: 1px solid var(--line);
+    color: var(--ink-secondary);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+    cursor: pointer;
+  }
+
+  .faq-cat-btn.active {
+    background: var(--green);
+    color: #ffffff;
+    border-color: var(--green);
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(10, 36, 33, 0.2);
   }
 
   .faq-list {
@@ -3027,16 +3197,7 @@ form input:focus, form select:focus, form textarea:focus {
   }
 
   .floating-top-btn {
-    bottom: 16px;
-    right: 14px;
-    width: 38px;
-    height: 38px;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
-  }
-
-  .floating-top-btn svg {
-    width: 16px;
-    height: 16px;
+    display: none !important;
   }
 }
 
@@ -3075,14 +3236,14 @@ form input:focus, form select:focus, form textarea:focus {
 
   .lifestages-tabs {
     grid-template-columns: 1fr 1fr;
-    gap: 6px;
-    padding: 5px;
+    gap: 8px;
+    padding: 8px;
   }
 
   .stage-tab-btn {
-    font-size: 12px;
-    padding: 8px 4px;
-    line-height: 1.3;
+    font-size: 11.5px;
+    padding: 11px 6px;
+    line-height: 1.35;
   }
 
   .stage-panel {
@@ -3103,15 +3264,7 @@ form input:focus, form select:focus, form textarea:focus {
   }
 
   .floating-top-btn {
-    bottom: 14px;
-    right: 12px;
-    width: 34px;
-    height: 34px;
-  }
-
-  .floating-top-btn svg {
-    width: 14px;
-    height: 14px;
+    display: none !important;
   }
 }
 
@@ -3148,19 +3301,7 @@ form input:focus, form select:focus, form textarea:focus {
 
 
 
-/* Service Card Header Layout */
-.service-card-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 16px;
-  width: 100%;
-  margin-bottom: 12px;
-}
-.service-card-head h3 {
-  margin: 0;
-  font-size: 21px;
-}
+
 
 /* Step Badge Layout */
 .step-badge {
