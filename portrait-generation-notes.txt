@@ -1,0 +1,13 @@
+Professional portraits for Rupinder Kalsi
+
+Generated using the built-in image-generation tool, with Mam photos.jpg as the identity reference. Both images are AI-assisted professional restylings, not records of actual photo sessions.
+
+Saved deliverables:
+rupinder-professional-portrait.png
+rupinder-office-portrait.png
+
+Prompt 1:
+Use case: identity-preserve. Edit the reference photo of Rupinder Kalsi into a premium, photorealistic professional financial-advisor portrait for her own website. Preserve her exact recognizable face, eyes, nose, lips, skin tone, apparent age and dark hair. Do not beautify into a different person or slim her face. Change casual clothing to a tailored dark deep-teal blazer over a warm ivory blouse, delicate existing gold necklace. Chest-up portrait, relaxed confident upright pose, subtle warm closed-mouth smile, looking at camera. Hair neatly styled with loose face-framing strands preserving her hairstyle character. Soft natural window light, elegant warm ivory studio/office backdrop softly blurred. Editorial business photography, real skin texture, no text, no watermarks. Vertical 4:5 composition with generous space above head and shoulders, person centered. This is a professional restyling of the supplied person, identity fidelity is the highest priority.
+
+Prompt 2:
+Use case: identity-preserve. Create a second professional editorial photograph of the exact woman in the supplied reference for her financial advisor website. Her name is Rupinder Kalsi. Preserve exact facial identity, skin tone, facial proportions, nose, eyes, lips and apparent age. Do not change face or make her slimmer. She sits comfortably at a light oak desk in an elegant understated warm office, wearing a tailored warm beige blazer and ivory top, delicate gold necklace, neatly styled dark hair with face-framing strands. Medium waist-up composition, hands naturally together resting on a closed notebook, head looking toward camera, subtle welcoming smile. Soft window light from left, muted green plant blurred behind, ivory plaster wall, warm professional editorial photograph, realistic skin texture. Vertical 4:5 photograph, no text or branding. No other people. It must look like the original person professionally photographed, not a different model.
