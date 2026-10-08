@@ -302,14 +302,15 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       const data = new FormData(bookingForm);
       const name = data.get('name') || 'Friend';
-      const topic = data.get('topic') || 'your financial priorities';
-      const meetingType = data.get('meetingType') || 'Video Call';
+      const phone = data.get('phone') || '';
+      const email = data.get('email') || '';
+      const meetingType = data.get('meetingType') || 'Phone Call';
 
       const successMsg = $('#success-message');
       if (successMsg) {
         successMsg.innerHTML = `
-          Thank you, <strong>${escapeHtml(name)}</strong>. We have prepared your preview conversation request via <strong>${escapeHtml(meetingType)}</strong> focusing on <em>${escapeHtml(topic)}</em>.<br><br>
-          In a live launch, an automatic calendar invitation with meeting details and an introductory checklist would be sent to <strong>${escapeHtml(data.get('email'))}</strong>.
+          Thank you, <strong>${escapeHtml(name)}</strong>! Your consultation request has been received.<br><br>
+          Rupinder will connect with you via <strong>${escapeHtml(meetingType)}</strong> at <strong>${escapeHtml(phone)}</strong> (and send a confirmation to <strong>${escapeHtml(email)}</strong>) within 24 business hours.
         `;
       }
 

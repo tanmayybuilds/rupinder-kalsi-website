@@ -1260,69 +1260,78 @@
   </aside>
 
   <!-- DIALOG 1: CONSULTATION BOOKING MODAL -->
-  <dialog id="booking-dialog" aria-labelledby="booking-title">
+  <dialog id="booking-dialog" class="quick-booking-dialog" aria-labelledby="booking-title">
     <button class="close-dialog" aria-label="Close consultation modal">×</button>
     
     <div id="booking-content">
-      <h2 id="booking-title">A conversation<br><em>about you.</em></h2>
-      <p class="dialog-description">Share a little about what is on your mind and how you prefer to connect.</p>
-
-      <div class="preview-note-box">
-        ✧ Preview Demonstration · This interactive modal simulates the consultation request process in your browser.
+      <div class="quick-form-header">
+        <span class="quick-form-badge">✦ Direct Advisory Access</span>
+        <h2 id="booking-title">Book a Free Consultation</h2>
+        <p class="dialog-description">Share your details and Rupinder will connect with you within 24 hours.</p>
       </div>
 
-      <form id="booking-form">
-        <!-- Preferred format selector -->
-        <label>Preferred Conversation Format:
-          <div class="meeting-type-selector">
-            <button type="button" class="meeting-type-btn active" data-type="Video Call">📹 Video Call</button>
-            <button type="button" class="meeting-type-btn" data-type="Phone Call">📞 Phone Call</button>
-            <button type="button" class="meeting-type-btn" data-type="In-Person Coffee">☕ In-Person</button>
-          </div>
-          <input type="hidden" name="meetingType" id="meetingTypeInput" value="Video Call">
-        </label>
+      <form id="booking-form" class="quick-booking-form">
+        <input type="hidden" name="topic" id="booking-topic" value="General Financial Check-in">
 
-        <div class="form-grid-2">
-          <label>Your Full Name
-            <input name="name" autocomplete="name" required placeholder="e.g. Jane Smith" maxlength="100">
-          </label>
-          <label>Email Address
-            <input name="email" type="email" autocomplete="email" required placeholder="jane@example.com" maxlength="200">
-          </label>
+        <!-- Full Name (Required) -->
+        <div class="form-field">
+          <label for="booking-name">Your Full Name</label>
+          <div class="input-with-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            <input id="booking-name" name="name" autocomplete="name" required placeholder="e.g. Gurpreet Singh" maxlength="100">
+          </div>
         </div>
 
-        <label>Primary Topic You'd Like to Explore
-          <select name="topic" id="booking-topic">
-            <option>General Getting Started &amp; Financial Check-in</option>
-            <option>Family &amp; Protection Planning</option>
-            <option>Saving &amp; Wealth Growth</option>
-            <option>Retirement &amp; Beyond</option>
-            <option>Children &amp; Education Milestones</option>
-            <option>Tax-Aware Cash Flow Strategy</option>
-            <option>Legacy &amp; Intergenerational Wealth</option>
-          </select>
-        </label>
+        <!-- Mobile Number (Explicit user requirement) -->
+        <div class="form-field">
+          <label for="booking-phone">Mobile Number</label>
+          <div class="input-with-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <input id="booking-phone" name="phone" type="tel" autocomplete="tel" required placeholder="e.g. (604) 555-0199" maxlength="30">
+          </div>
+        </div>
 
-        <label>Anything Specific on Your Mind? <span>(optional)</span>
-          <textarea name="message" id="booking-message" maxlength="1000" rows="3" placeholder="A current milestone, a career transition, or simply a question you've been wondering about..."></textarea>
-        </label>
+        <!-- Email Address (Required) -->
+        <div class="form-field">
+          <label for="booking-email">Email Address</label>
+          <div class="input-with-icon">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+            <input id="booking-email" name="email" type="email" autocomplete="email" required placeholder="name@example.com" maxlength="150">
+          </div>
+        </div>
 
-        <button class="button" type="submit" style="width: 100%; margin-top: 10px;">
-          Send Consultation Request <span>↗</span>
+        <!-- Quick Contact Format Pills -->
+        <div class="form-field format-field">
+          <label>Preferred Contact Mode:</label>
+          <div class="quick-meeting-pills">
+            <label class="pill-radio"><input type="radio" name="meetingType" value="Phone Call" checked><span>📞 Phone</span></label>
+            <label class="pill-radio"><input type="radio" name="meetingType" value="WhatsApp"><span>💬 WhatsApp</span></label>
+            <label class="pill-radio"><input type="radio" name="meetingType" value="Video Call"><span>📹 Video</span></label>
+          </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button class="button quick-submit-btn" type="submit">
+          <span>Request Free Consultation</span> <b>↗</b>
         </button>
+
+        <div class="quick-form-trust">
+          <span>🔒 100% Confidential · No Sales Pressure · Direct Callback</span>
+        </div>
       </form>
     </div>
 
     <!-- Success confirmation state -->
     <div id="booking-success" hidden>
-      <h2>Here’s your<br><em>conversation starter.</em></h2>
-      <p id="success-message" style="margin: 16px 0; color: var(--muted);"></p>
+      <div class="success-icon-badge">✓</div>
+      <h2>Request Received!</h2>
+      <p id="success-message" style="margin: 14px 0 20px; color: var(--muted); font-size: 15px; line-height: 1.6;"></p>
       
       <div class="preview-note-box">
-        <strong>Demo Complete:</strong> In the live environment, you will receive a calendar invitation with direct conference details. Bring your priorities and your questions.
+        <strong>Next Step:</strong> Rupinder Kalsi will review your request and reach out directly within 24 business hours.
       </div>
 
-      <button class="button close-success" style="width: 100%;">Return to Website <span>↗</span></button>
+      <button class="button close-success" style="width: 100%; margin-top: 16px;">Done <b>✓</b></button>
     </div>
   </dialog>
 

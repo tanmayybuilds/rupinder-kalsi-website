@@ -2600,6 +2600,170 @@ dialog::backdrop {
   color: var(--ink);
 }
 
+/* ==========================================================================
+   QUICK CONSULTATION BOOKING FORM (COMPACT & INSTANTLY FILLABLE)
+   ========================================================================== */
+.quick-booking-dialog {
+  width: min(470px, calc(100% - 28px));
+  padding: 32px 28px 24px;
+  border-radius: 24px;
+}
+
+.quick-form-header {
+  margin-bottom: 16px;
+}
+
+.quick-form-badge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gold-text);
+  margin-bottom: 6px;
+}
+
+#booking-dialog h2 {
+  font-size: 24px;
+  line-height: 1.25;
+  margin-bottom: 6px;
+  color: var(--ink);
+}
+
+#booking-dialog .dialog-description {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+.quick-booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin-top: 14px;
+}
+
+.quick-booking-form .form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.quick-booking-form .form-field label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--ink);
+  letter-spacing: 0.01em;
+  margin-bottom: 0;
+}
+
+.input-with-icon {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-with-icon svg {
+  position: absolute;
+  left: 14px;
+  color: var(--muted);
+  pointer-events: none;
+}
+
+.input-with-icon input {
+  width: 100%;
+  height: 46px;
+  padding: 0 14px 0 42px;
+  background: var(--surface);
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-sm);
+  font-family: var(--sans);
+  font-size: 14px;
+  color: var(--ink);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input-with-icon input:focus {
+  outline: none;
+  border-color: var(--gold-text);
+  box-shadow: 0 0 0 3px rgba(191, 160, 96, 0.2);
+}
+
+.quick-meeting-pills {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.pill-radio {
+  display: block;
+  cursor: pointer;
+  margin: 0;
+}
+
+.pill-radio input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.pill-radio span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  font-size: 12.5px;
+  font-weight: 500;
+  color: var(--ink);
+  transition: all 0.2s ease;
+}
+
+.pill-radio input:checked + span {
+  background: #18221f;
+  color: #ffffff;
+  border-color: #18221f;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.quick-submit-btn {
+  width: 100%;
+  height: 48px;
+  font-size: 14.5px;
+  font-weight: 600;
+  margin-top: 4px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.quick-form-trust {
+  text-align: center;
+  font-size: 11px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.success-icon-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #e8f5e9;
+  color: #2e7d32;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 14px;
+  font-weight: bold;
+}
+
 .meeting-type-selector {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -2905,6 +3069,17 @@ body.modal-open .sticky-bottom-bar {
   .cases-intro-divider span {
     background: #0e201b;
     border-color: rgba(255, 255, 255, 0.1);
+  }
+
+  .pill-radio input:checked + span {
+    background: var(--gold, #d4af37);
+    color: #0b1a17;
+    border-color: var(--gold, #d4af37);
+  }
+
+  .success-icon-badge {
+    background: #19382b;
+    color: #4ade80;
   }
 }
 
@@ -3363,6 +3538,15 @@ body.modal-open .sticky-bottom-bar {
     max-width: 500px;
     padding: 32px 20px 28px;
     border-radius: var(--radius-md);
+  }
+
+  .quick-booking-dialog {
+    padding: 24px 18px 20px;
+    border-radius: 20px;
+  }
+
+  .quick-booking-dialog h2 {
+    font-size: 22px;
   }
 
   dialog h2 {
