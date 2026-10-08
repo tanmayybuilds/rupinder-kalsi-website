@@ -503,13 +503,12 @@ p:last-child {
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
-  gap: clamp(36px, 4vw, 56px);
+  gap: clamp(32px, 4vw, 52px);
   max-width: 1080px;
-  margin-bottom: 48px;
+  margin-bottom: 36px;
 }
 
 .section-top > div {
-  flex: 0 1 auto;
   max-width: 580px;
 }
 
@@ -521,7 +520,7 @@ p:last-child {
 }
 
 .section-top > p {
-  flex: 0 1 420px;
+  width: 100%;
   max-width: 440px;
   color: var(--muted);
   font-size: 15px;
@@ -1608,13 +1607,13 @@ p:last-child {
 }
 
 #insights .section-top > div {
-  flex: 1 1 540px;
   max-width: 600px;
+  width: 100%;
 }
 
 #insights .section-top > p {
-  flex: 1 1 480px;
   max-width: 520px;
+  width: 100%;
   margin-bottom: 4px;
 }
 
@@ -2730,25 +2729,36 @@ form input:focus, form select:focus, form textarea:focus {
   }
 
   .section {
-    padding: 64px 20px;
+    padding: 48px 20px;
   }
 
-  .section-top {
+  .section-top,
+  #insights .section-top {
     flex-direction: column;
     align-items: flex-start;
-    gap: 14px;
-    margin-bottom: 36px;
+    gap: 12px;
+    margin-bottom: 24px;
   }
   
+  .section-top > div,
+  #insights .section-top > div {
+    width: 100%;
+    max-width: 100%;
+  }
+
   .section-top h2 {
-    font-size: clamp(28px, 6vw, 38px);
+    font-size: clamp(26px, 5.5vw, 36px);
     margin-bottom: 0;
   }
 
-  .section-top > p {
+  .section-top > p,
+  #insights .section-top > p {
+    flex: initial;
+    width: 100%;
     max-width: 100%;
-    font-size: 14px;
-    line-height: 1.65;
+    font-size: 14.5px;
+    line-height: 1.6;
+    margin-bottom: 0;
   }
 
   .values-strip {
@@ -2914,7 +2924,19 @@ form input:focus, form select:focus, form textarea:focus {
 /* --- STANDARD SMARTPHONES (<= 640px) --- */
 @media (max-width: 640px) {
   .section {
-    padding: 52px 18px;
+    padding: 38px 18px;
+  }
+
+  .section-top,
+  #insights .section-top {
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .section-top > p,
+  #insights .section-top > p {
+    font-size: 14px;
+    line-height: 1.55;
   }
 
   .hero {
@@ -3367,6 +3389,10 @@ form input:focus, form select:focus, form textarea:focus {
 
 /* --- ULTRA COMPACT SCREENS (<= 380px, e.g. iPhone SE) --- */
 @media (max-width: 380px) {
+  .section {
+    padding: 32px 14px;
+  }
+
   .hero h1 {
     font-size: 28px;
     line-height: 1.15;
