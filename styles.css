@@ -1312,6 +1312,15 @@ p:last-child {
 }
 
 /* ==========================================================================
+   CLIENT TESTIMONIALS & REVIEWS SECTION
+   ========================================================================== */
+.testimonials-section {
+  background: var(--surface);
+  border-top: 1px solid var(--line);
+  position: relative;
+}
+
+/* ==========================================================================
    CASE STUDIES / REAL-WORLD SCENARIOS
    ========================================================================== */
 .cases-section {
@@ -3012,6 +3021,10 @@ form input:focus, form select:focus, form textarea:focus {
 
   .sticky-consult-btn:hover {
     background: #e2c050;
+  }
+
+  .testimonials-section {
+    background: #0d1e1a;
   }
 
   .testimonial-card {
