@@ -748,7 +748,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'Family Wealth & Values',
       title: 'The Family Wealth Playbook: Raising Financially Resilient Kids',
       body: `
-        <p>As a mother of three and a financial advisor for over two decades, one of the most frequent questions parents ask me is: <em>"How do I teach my kids about money without passing along anxiety?"</em></p>
+        <p>As a parent and a financial advisor for over two decades, one of the most frequent questions clients ask me is: <em>"How do I teach my kids about money without passing along anxiety?"</em></p>
         <p>Children absorb their relationship with money through observation rather than lectures. Here are three practical pillars we recommend:</p>
         <ul style="padding-left: 20px; margin: 16px 0; display:flex; flex-direction:column; gap:10px;">
           <li><strong>The Three-Jar System for Young Children:</strong> Spend, Save, Give. Giving children agency over a small allowance cultivates trade-off thinking before adult stakes arise.</li>
