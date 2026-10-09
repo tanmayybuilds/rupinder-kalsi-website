@@ -30,7 +30,7 @@ Content & Interactive Features:
    - 4 tabbed life stages (Young Families, Peak Career, 5-10 Years to Retirement, Active Retirement & Legacy)
    - Real-world milestone checklists, high-end editorial lifestyle photography, and actionable guidance.
 5. Meet Rupinder (Biography & Mission):
-   - Personal narrative of 20+ years navigating market cycles, perspective as a mother of three, 4-stat proof grid, and personalized signature block.
+   - Personal narrative of 20+ years navigating market cycles, mother of three, 4-stat proof grid (20+ years, 300+ clients, 100% fiduciary care, 0 pressure), and personalized signature block.
 6. The Four Philosophy Pillars:
    - Listening Comes First, Clarity Over Complexity, Disciplined Compounding, Fiduciary Partnership.
 7. A More Human Approach (Client Journey Roadmap):
