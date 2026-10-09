@@ -11,7 +11,7 @@ Design & Animation Architecture:
   * Top window scroll progress bar
   * Sticky header with blur glassmorphism and active section spy
   * Staggered scroll-reveal transitions with spring easing
-  * Live animated number counters (20+ years, 300+ clients, 100% fiduciary care)
+  * Live animated number counters (20+ years, 1000+ clients, 100% fiduciary care)
   * Floating care badge and interactive hover lifts with ambient glowing effects
   * Floating back-to-top button with smooth scroll
 
@@ -30,7 +30,7 @@ Content & Interactive Features:
    - 4 tabbed life stages (Young Families, Peak Career, 5-10 Years to Retirement, Active Retirement & Legacy)
    - Real-world milestone checklists, high-end editorial lifestyle photography, and actionable guidance.
 5. Meet Rupinder (Biography & Mission):
-   - Personal narrative of 20+ years navigating market cycles, 4-stat proof grid (20+ years, 300+ clients, 100% fiduciary care, 0 pressure), and personalized signature block.
+   - Personal narrative of 20+ years navigating market cycles, 4-stat proof grid (20+ years, 1000+ clients, 100% fiduciary care, 0 pressure), and personalized signature block.
 6. The Four Philosophy Pillars:
    - Listening Comes First, Clarity Over Complexity, Disciplined Compounding, Fiduciary Partnership.
 7. A More Human Approach (Client Journey Roadmap):
