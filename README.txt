@@ -11,7 +11,7 @@ Design & Animation Architecture:
   * Top window scroll progress bar
   * Sticky header with blur glassmorphism and active section spy
   * Staggered scroll-reveal transitions with spring easing
-  * Live animated number counters (20+ years, 100% fiduciary care)
+  * Live animated number counters (20+ years, 300+ clients, 100% fiduciary care)
   * Floating care badge and interactive hover lifts with ambient glowing effects
   * Floating back-to-top button with smooth scroll
 
