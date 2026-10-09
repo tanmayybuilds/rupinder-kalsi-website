@@ -293,11 +293,13 @@ document.addEventListener('DOMContentLoaded', () => {
     openDialog(bookingDialog);
   }
 
-  // Bind all [data-book] triggers
+  // Bind all [data-book] triggers to open cal.com
   $$('[data-book]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const topic = btn.dataset.topic || null;
-      openBookingModal(topic);
+    btn.addEventListener('click', (e) => {
+      if (btn.tagName.toLowerCase() !== 'a') {
+        e.preventDefault();
+        window.open('https://cal.com/rupinderkalsi', '_blank', 'noopener,noreferrer');
+      }
     });
   });
 
@@ -432,10 +434,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const serviceBookBtn = $('#service-book');
   if (serviceBookBtn && serviceDialog) {
-    serviceBookBtn.addEventListener('click', () => {
+    serviceBookBtn.addEventListener('click', (e) => {
       serviceDialog.close();
-      const currentService = serviceDetails[activeServiceKey];
-      openBookingModal(currentService ? currentService.title : null);
+      window.open('https://cal.com/rupinderkalsi', '_blank', 'noopener,noreferrer');
     });
   }
 
@@ -600,10 +601,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (quizApplyBtn) {
-    quizApplyBtn.addEventListener('click', () => {
-      const title = $('#quiz-result-title') ? $('#quiz-result-title').textContent : 'Clarity Check';
-      const prefillMessage = `From Clarity Reflection: Focus on ${quizState.focus} (${quizState.timeline}). Desired feeling: ${quizState.feeling}.`;
-      openBookingModal(title, prefillMessage);
+    quizApplyBtn.addEventListener('click', (e) => {
+      window.open('https://cal.com/rupinderkalsi', '_blank', 'noopener,noreferrer');
     });
   }
 
@@ -805,10 +804,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const articleBookBtn = $('#article-book-btn');
   if (articleBookBtn && articleDialog) {
-    articleBookBtn.addEventListener('click', () => {
+    articleBookBtn.addEventListener('click', (e) => {
       articleDialog.close();
-      const title = $('#article-title').textContent;
-      openBookingModal(title);
+      window.open('https://cal.com/rupinderkalsi', '_blank', 'noopener,noreferrer');
     });
   }
 

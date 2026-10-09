@@ -2,7 +2,7 @@ RUPINDER KALSI — FINANCIAL ADVISOR
 PREMIUM WEBSITE & INTERACTIVE PREVIEW
 
 Overview:
-An elevated, empathetic, and comprehensive digital presence for Rupinder Kalsi, financial advisor with over 20 years in finance and mother of three.
+An elevated, empathetic, and comprehensive digital presence for Rupinder Kalsi, financial advisor with over 20 years in finance.
 
 Design & Animation Architecture:
 - Color Palette: Deep forest teal (#143e3a), champagne warm gold (#bfa060), soft ivory (#faf8f3), warm cream, and porcelain cards.
@@ -30,7 +30,7 @@ Content & Interactive Features:
    - 4 tabbed life stages (Young Families, Peak Career, 5-10 Years to Retirement, Active Retirement & Legacy)
    - Real-world milestone checklists, high-end editorial lifestyle photography, and actionable guidance.
 5. Meet Rupinder (Biography & Mission):
-   - Personal narrative of 20+ years navigating market cycles, mother of three, 4-stat proof grid (20+ years, 300+ clients, 100% fiduciary care, 0 pressure), and personalized signature block.
+   - Personal narrative of 20+ years navigating market cycles, 4-stat proof grid (20+ years, 300+ clients, 100% fiduciary care, 0 pressure), and personalized signature block.
 6. The Four Philosophy Pillars:
    - Listening Comes First, Clarity Over Complexity, Disciplined Compounding, Fiduciary Partnership.
 7. A More Human Approach (Client Journey Roadmap):
