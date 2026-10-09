@@ -205,10 +205,22 @@ document.addEventListener('DOMContentLoaded', () => {
   let lastFocusedElement = null;
 
   function openDialog(dialog) {
+    if (!dialog) return;
     lastFocusedElement = document.activeElement;
     closeMobileMenu();
-    if (dialog && typeof dialog.showModal === 'function') {
-      dialog.showModal();
+    try {
+      if (typeof dialog.showModal === 'function') {
+        if (!dialog.open) {
+          dialog.showModal();
+        }
+      } else {
+        dialog.setAttribute('open', '');
+      }
+      document.body.classList.add('modal-open');
+    } catch (err) {
+      if (!dialog.open) {
+        dialog.setAttribute('open', '');
+      }
       document.body.classList.add('modal-open');
     }
   }
@@ -260,15 +272,18 @@ document.addEventListener('DOMContentLoaded', () => {
     if (bookingSuccess) bookingSuccess.hidden = true;
     
     if (topic && bookingTopicSelect) {
-      // Find matching or closest option
-      let found = false;
-      Array.from(bookingTopicSelect.options).forEach(opt => {
-        if (opt.text.toLowerCase().includes(topic.toLowerCase()) || topic.toLowerCase().includes(opt.text.toLowerCase())) {
-          bookingTopicSelect.value = opt.value;
-          found = true;
-        }
-      });
-      if (!found) bookingTopicSelect.selectedIndex = 0;
+      if (bookingTopicSelect.tagName === 'SELECT' && bookingTopicSelect.options) {
+        let found = false;
+        Array.from(bookingTopicSelect.options).forEach(opt => {
+          if (opt.text.toLowerCase().includes(topic.toLowerCase()) || topic.toLowerCase().includes(opt.text.toLowerCase())) {
+            bookingTopicSelect.value = opt.value;
+            found = true;
+          }
+        });
+        if (!found) bookingTopicSelect.selectedIndex = 0;
+      } else {
+        bookingTopicSelect.value = topic;
+      }
     }
 
     if (messagePrefill && $('#booking-message')) {
